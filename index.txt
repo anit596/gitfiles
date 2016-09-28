@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<head>
+		<title></title>
+        <link rel='stylesheet' type='text/css' href='stylesheet1.13.css'/>
+        <script type="text/javascript" src="script1.13.js"></script>
+	</head>
+	<body>
+     <div><br/><strong>HOME</strong></div>   
+	</body>
+</p> <p>
+
+    <head>
+        <title></title>
+        <script type="text/javascript" src="script2.12.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet2.12.css"></link>
+    </head>
+
+    <body>
+        <div class="panel">
+        <br />
+        <br />
+        <p>Hello World!</p>
+        </div>
+        <p class="slide"><div class="pull-me">Pull Me!</div></p>
+<p></p>
+    </body>
+
+	<body> 
+	<button onclick="unit1()">Unit 1</button>
+	<button onclick="unit2()">Unit 2</button>
+	<button onclick="unit3()">Unit 3</button>
+	<button onclick="unit4()">Unit 4</button>
+	<button onclick="unit5()">Unit 5</button>
+
+
+<script>
+function unit1() { 
+
+// Check if the user is ready to play!
+prompt("Are you ready to play?");
+    confirm("I am ready to play!");
+var age = prompt("What's your age?");
+if(age < 13)
+{
+    console.log("You are allowed to play, but I take no responsiblity.");
+}
+else
+{
+    console.log("Awesome, play on!");
+}
+    console.log("You are at a Justin Bieber concert,and you hear this lyric 'Lace my shoes off, start racing.'");
+    console.log("Suddenly, Bieber stops and says, 'Who wants to race me?'");
+    confirm("Yes")
+    console.log("Me.")
+var userAnswer = prompt("Do you want to race Bieber on stage?");
+if(userAnswer === "Yes") {
+    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace!")
+} else {
+    console.log("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race without pacing.'")
+}
+var feedback = prompt("Rate the game out of 10.")
+if(feedback >8)
+{
+    console.log("Thank you! We should race at the next concert!")
+} else {
+    console.log("I'll keep practicing coding and racing.")
+}
+};
+
+	</script>
+
+<script>
+function unit2() {
+
+var userChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+	computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+	computerChoice = "paper";
+} else {
+	computerChoice = "scissors";
+} console.log("Computer: " + computerChoice);
+var compare=function(choice1,choice2)
+{
+    if(choice1===choice2)
+    {
+        return "The result is a tie!";
+    }
+    else if(choice1==="rock")
+    {
+        if(choice2==="scissors")
+        {
+            return "rock wins!";
+        }
+        else
+        {
+            return "paper wins!";
+        }
+    }
+    else if(choice1==="paper")
+    {
+        if(choice2==="rock")
+        {
+            return "paper wins!";
+        }
+        else
+        {
+            return "scissors wins!";
+        }
+    }
+    else if(choice1==="scissors")
+    {
+        if(choice2==="rock")
+        {
+            return "rock wins!";
+        }
+        else
+        {
+    return "scissors wins!";
+        }
+    }
+    }
+console.log(compare(userChoice, computerChoice))
+};
+	</script>
+
+<script>
+function unit3() {
+
+var text="Hello, my name is Angelica Nito.";
+var myName= "Angelica Nito";
+var hits=[];
+for (var i = 0; i < text.length; i++){
+
+if (text[i] === 'A') {
+for(var j = i; j < myName.length + i; j++){
+
+hits.push(text[j]);
+}
+}
+}
+};
+
+	</script>
+
+<script>
+function unit4() {
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2);
+var damageThisRound = Math.floor(Math.random() * 5 + 1);
+var totalDamage = 0;
+
+
+while(slaying) {
+    if(youHit===1) {
+        console.log("You hit!");
+        totalDamage += damageThisRound;
+        if(totalDamage >=4) {
+        console.log("You win!");
+        slaying = false;
+    } else {
+        youHit = Math.floor(Math.random() * 2);
+    }
+} else {
+    console.log("You lose!");
+    slaying = false;
+    }
+}
+};
+	</script>
+
+<script>
+function unit5() {
+
+var user = prompt("You are in INFOSYS280, and you fail your test. What do you do? Do you STUDY, ACCEPT FAILING THE EXAM, or NOT STUDY?").toUpperCase();
+
+switch(user) {
+    case'STUDY':
+    var eight = prompt("Study at least 8 hours per week, (YES or NO?").toUpperCase();
+    var studious = prompt("Do you study all eight hours for INFOSYS280?").toUpperCase();
+    if(eight === 'YES' && studious === 'YES') {
+        console.log("You must work hard! Proud of you!");
+    } else {
+        console.log("You should study more, so you can be a CEO one day!");
+    }
+    break;
+    case'ACCEPT FAILING THE EXAM':
+    var compulsory = prompt("Is INFOSYS280 compulsory, (YES or NO)?").toUpperCase();
+    var poor = prompt("But do you want to be poor when you're older, (YES or NO)?").toUpperCase();
+    if(compulsory ==='YES' || poor ==='NO') {
+        console.log("You have done some research, don't be too hard on yourself.");
+    } else {
+        console.log("It's okay, we can try a second time.");
+    }
+    break;
+    case'NOT STUDY':
+    var blog = prompt("What else are you going to do? Start a blog? (YES or NO)").toUpperCase();
+    var paper = prompt("Take another INFOSYS paper, (YES or NO)?").toUpperCase();
+    if (blog === 'YES' && paper === 'YES') {
+        console.log("There many other options if you fail. Blogging is a good start.");
+    } else { 
+        console.log("You should probably do some more research.");
+    }
+    break;
+    default:
+        console.log("What are you saying? You should probably study, haha.");
+}
+};
+        
+	</script>
+<p>
+
+<centre>	<img src="http://4.bp.blogspot.com/-9OR-AcCnWWE/UP1oJmJZntI/AAAAAAAAAT0/SmQAiFe1134/s1600/michelle-obama-quote.jpg"/>
+</centre></p>
+
+		</body>
+</html>
